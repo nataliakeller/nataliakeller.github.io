@@ -1,0 +1,220 @@
+html, body {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+
+}
+
+.logo h1 {
+    font-family: 'Gebrina';
+    position: absolute;
+    color: #fff;
+    z-index: 4;
+    font-size: 100px;
+    top: 25%;
+    left: 34%;
+}
+
+.logo p {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    z-index: 4;
+    position: absolute;
+    left: 23%;
+    top: 50%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#about {
+    color: black;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-align: center;
+    width: 700px;
+    height: 300px;
+    margin-left: 30%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.navbar {
+    background: transparent;
+    position: absolute;
+    z-index: 5;
+    padding-left: 20px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar-brand, .navbar-brand:hover {
+    color: white;
+}
+
+h2 {                             /* Defining h2 with a specific font */
+    font-family: 'Damion';
+    font-weight: bold;
+    font-size: 57px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* Setting the menu section */
+.item {
+    position: relative;
+}
+
+.item-img img {
+   width: 100%;
+   height: 400px;
+   padding-bottom: 25px;
+}
+
+/* Menu animation */
+.item-description-layer { 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+    background: rgba(252, 252, 252, 0.6);
+    color: rgb(0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 540px;
+
+    transition: opacity .5s, visibility 1s;
+}
+
+.item:hover .item-description-layer {
+    visibility: visible;
+    opacity: 1;
+}
+
+.item-description {
+    transition: .5s;
+    transform: translateY(1em);
+}
+
+.item:hover .item-description {
+    transform: translateY(0em)
+}
+
+.item-title {
+    position: absolute;
+    top: 25px;
+}
+
+.item-paragraph {
+    text-align: center;
+    padding: 15px; 
+}
+
+/* Itens são os itens do cardápio */
+
+#menu-img {
+    background: url(../img/story1.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 300px;
+    border-top: #000000 2px solid;
+    border-bottom: #000000 2px solid;
+    overflow: hidden;
+}
+
+/* It is necessary to add a border after super slides */
+.outborder {
+    border-bottom: 2px solid #000000;
+}
+
+/* Estilização do texto da descrição do menu de comida */
+.menu-description {
+    text-align: center;
+    width: 900px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+
+}
+
+/* Configuração do icon do menu para devices */ 
+.navbar-toggler-icon {
+    background: url(../img/menubar.png);
+    background-size: 100%;
+}
+
+/* Endereço da loja */
+.place-description {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* Configuração da imagem antes do mapa do google */
+#place-img {
+    background: url(../img/story2.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 300px;
+    border-top: #000000 2px solid;
+    border-bottom: #000000 2px solid;
+    overflow: hidden;
+}
+
+
+/* FORM */
+
+.form_wrap {
+    position: relative;
+    max-width: 960px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.item input , .item textarea{
+    margin-top: 16px;
+    position: relative;
+}
+
+
+/* FOOTER */
+
+.footer_wrap {
+    bottom: 0;
+    color: #707070;
+    height: 2em;
+    text-align: center;
+}
+
+/* === IPAD === */
+
+@media only screen and (max-width: 992px) {
+    .item-img img {
+        width: 300px;
+        height: auto;
+        padding-bottom: 25px;
+     }
+}

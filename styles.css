@@ -1,0 +1,523 @@
+@keyframes up {
+    from {
+        transform: translateY(30px);
+    } to {
+        opacity: 1;
+    }
+} 
+
+@keyframes left {
+    from {
+        transform: translateX(90px);
+    } to {
+        opacity: 1;
+    }
+} 
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.2rem;
+    color: black;
+    /* == */
+    position: relative;
+    min-height: 100vh;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*============================*/
+
+.site-title {
+    font-family: 'Fredoka One';
+    text-transform: uppercase;
+}
+
+/* === MAIN GRID & CARD === */
+.card {
+    max-width: 1280px;
+    max-height: 720px;
+    margin: 5% auto;
+    box-shadow: 10px 10px 50px 8px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.3s;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 480px 800px;
+}
+
+/* === FIRST SECTION === */
+.header {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header .circle {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(234, 234, 234, 0.4);
+
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.site-title.index {
+    font-size: 64px;
+}
+
+.description {
+    position: relative;
+    top: 50%;
+}
+
+/* === FIRST SECTION === */
+
+.index-first-section {
+    height: 720px;
+    font-size: 24px;
+    text-align: center;
+    z-index: 15;
+    background: #f9f9f9;
+}
+
+.index-first-section .join-now {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    margin-top: 100px;
+    border-radius: 6px;
+    background: rgba(196, 196, 196, 0.19);
+    text-align: center;
+    line-height: 100px;
+    font-size: 32px;
+
+    box-shadow: 0 2px 7px 4px rgba(116, 98, 96, 0.3);
+
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.7s;
+}
+
+.index-first-section .join-now:hover {
+    transition: all 0.42 ease;
+    background: #fce7e786;
+}
+
+/* === SECOND SECTION === */
+
+.index-second-section {
+    width: auto;
+}
+
+/* === IMAGE CONTAINER === */
+
+.index-second-section .image-container {
+    position: relative;
+    float: right;
+}
+
+/* Tamanho da foto do INDEX */ 
+.image-container img {
+    width: 800px;
+    height: 720px;
+}
+
+
+/* === NAVBAR === */
+.index-second-section nav {
+    position: relative;
+}
+
+.index-second-section nav ul {
+    display: flex;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 20px;
+    z-index: 999;
+}
+
+.index-second-section nav ul li a {
+    margin-right: 36px;
+    padding: 8px;
+}
+
+.index-second-section nav ul li a:hover {
+    transition: all 0.3s ease;
+    color: #adadad;
+}
+
+/* === DISCOVER === */
+
+.circle.discover {
+    opacity: 0.89;
+}
+
+.site-title.discover {
+    font-size: 32px;
+}
+
+.description.discover {
+    top: 32%;
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
+
+.description.discover ul li {
+    position: relative;
+    text-align: center;
+    margin-top: 36px;
+
+}
+
+.description.discover ul li div {
+    border-radius: 1px;
+    margin: 20px auto;
+    border-bottom: solid 1px rgba(116, 116, 116, 0.205);
+    width: 45%;
+}
+
+.discover.join {
+    position: relative;
+}
+
+.discover.join a {
+    font-weight: bold;
+    z-index: 1;
+    width: 350px;
+    height: 45px;
+    
+    position: absolute;
+    top: 600px;
+    left: 450px;
+    background: rgba(255, 255, 255, 0.729);
+    text-align: center;
+    line-height: 45px;
+
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: left;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+}
+
+.discover.join a:hover {
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255);
+}
+
+.index-second-section .image-container .discover {
+    width: auto;
+    z-index: -1; 
+}
+
+/* === LOGIN PAGE === */
+
+.main-grid.login {
+    grid-template-columns: 800px 480px;
+}
+
+.index-first-section.login {
+    background: #e7e7e7;
+}
+
+.sign-up a h4 {
+    background-color: #000000;
+    width: 380px;
+    height: 45px;
+    font-size: 24px;
+    line-height: 45px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 70px auto 0;
+}
+
+.sign-up a h4:hover {
+    transition: all 0.5s ease-in-out;
+    color: black;
+    background-color: #aaaaaa;
+}
+
+.form-title {
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+.form-title h1 {
+    font-size: 24px;
+}
+
+.login-form {
+    margin: 0 auto;
+    width: 380px;
+    height: 420px;
+    background: rgba(196, 196, 196, 0.2);
+}
+
+/* input */
+.login-form input {
+    width: 273px;
+    height: 43px;
+    font: inherit;
+    font-size: 18px;
+    border: none;
+    appearance: none;
+    background: #d2d2d2;
+    outline: none;
+    padding: 8px;
+}
+
+.login-form input:first-child {
+    margin-bottom: 40px;
+}
+
+input.login#username {
+    background-image: url('./img/accountfigma.png');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    text-indent: 36px;
+}
+
+
+input.login#password {
+    background-image: url('./img/keyfigma.png');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    text-indent: 36px;
+}
+
+input.login#password:focus {
+    transition: 0.3s all ease;
+    background-image:none;
+    text-indent: 5px;
+}
+
+.login-form button {
+    width: 152px;
+    height: 40px;
+    background-color: rgba(29, 36, 62, 0.31);
+    border: none;
+    border-radius: 4px;
+    font-family: Nixie One;
+    font-size: 20px;
+    cursor: pointer;
+}
+.login-form button:hover {
+    transition: 0.3s all ease-in;
+    background-color: rgba(29, 36, 62, 0.15);
+}
+
+.forgot-password {
+    width: 273px;
+    font-family: Nixie One;
+    font-size: 14px;
+    padding: 8px 0;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+/* === SIGN UP PAGE === */
+.main-grid.signup, .main-grid.success {
+    grid-template-columns: 800px 480px;
+}
+
+.index-first-section.signup, .index-first-section.success {
+    background: #e7e7e7;
+    padding-top: 60px;
+}
+
+.form-title {
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+.form-title h1 {
+    font-size: 24px;
+}
+
+.signup-form {
+    margin: 0 auto;
+    width: 380px;
+    height: 620px;
+    background: rgba(196, 196, 196, 0.2);
+}
+
+/* input */
+.signup-form input {
+    width: 284px;
+    height: 40px;
+    font: inherit;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px  rgba(196, 196, 196, 0.5) solid;
+    border-bottom-width: 2px;
+    margin: 0 0 40px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    text-indent: 50px;
+}
+
+input.signup:first-child {
+    margin-top: 30px;
+}
+
+input.signup#username {
+    background-image: url('./img/accountfigma.png');
+}
+
+input.signup#email {
+    background-image: url('./img/emailfigma.png');
+    
+}
+
+input.signup#username:focus, input#email:focus{
+    transition: 0.3s all ease;
+    background-image:none;
+    text-indent: 5px;
+}
+
+input.signup#password {
+    background-image: url('./img/keyfigma.png');
+    background-color: rgba(196, 196, 196, 0.5);
+    background-repeat: no-repeat;
+    border: none;
+
+    margin-top: 20px;
+}
+
+input.signup#check {
+    background-image: url('./img/checkpasswordfigma.png');
+    background-color: rgba(196, 196, 196, 0.5);
+    background-repeat: no-repeat;
+    border: none;
+}
+
+
+input.signup#password, input#check{
+    margin-bottom: 28px;
+}
+
+.signup-form button {
+    margin-top: 60px;
+    width: 152px;
+    height: 40px;
+    background-color: rgba(29, 36, 62, 0.31);
+    border: none;
+    border-radius: 4px;
+    font-family: Nixie One;
+    font-size: 20px;
+    cursor: pointer;
+}
+.signup-form button:hover {
+    transition: 0.3s all ease-in;
+    background-color: rgba(29, 36, 62, 0.747);
+    color: white;
+}
+
+
+/* === FOOTER === */
+
+footer {
+    display: inline-flex;
+}
+
+footer div a {
+    color: #000000a8;
+    font-size: 14px;
+    margin-right: 30px;
+    font-weight: lighter;
+}
+
+footer div a:hover {
+    transition: 0.3s all ease;
+    color: #b9b9b9;
+}
+
+/* === SUCCESS PAGE === */
+
+.circle.success {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+    margin: 0 auto;
+    padding-top: 27px;
+}
+
+.retangle.success {
+    background-color: #e0e0e0;
+    width: 380px;
+    height: 620px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.success-text h4 {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.success-text p {
+    font-family: Nixie One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.success.button {
+    width: 54px;
+    padding: 8px;
+    margin: 40px auto 0;
+    border-radius: 8px;
+    background: rgba(248, 248, 248, 0.427);
+}
+
+.success.button:hover {
+    background: rgba(248, 248, 248, 1);
+    transition: 0.3s ease all;
+}
